@@ -8,28 +8,28 @@ time_windows <<- c("10 Minutes", "Hourly", "Daily")
 list_matrices <<- array(list(), dim=c(2,3,3), dimnames = list(matrix_types, map_types, time_windows));
 list_port_matrices <<- array(list(), dim = c(2,3,3), dimnames = list(matrix_types, map_types, time_windows));
 list_asn_matrices <<- array(list(), dim = c(2,3,3), dimnames = list(matrix_types, map_types, time_windows));
-df_asn_org <<- fread(file = "./data/darknet/metadata/merit_asns.txt", header = TRUE)
+df_asn_org <<- fread(file = "./data/merit_asns.txt", header = TRUE)
 
 # Read in csv files once every day
-df_pkts_view <<- fread(file = "./data/darknet/metadata/packets.csv", header = TRUE)
-df_bytes_view <<- fread(file = "./data/darknet/metadata/bytes.csv", header = TRUE)
-df_uS_1d <<- fread(file = "./data/darknet/metadata/unique1d.csv", header = TRUE)
-df_uS_1h <<- fread(file = "./data/darknet/metadata/unique1h.csv", header = TRUE)
-df_uS_10m <<- fread(file = "./data/darknet/metadata/unique10m.csv", header = TRUE)
+df_pkts_view <<- fread(file = "./data/packets.csv", header = TRUE)
+df_bytes_view <<- fread(file = "./data/bytes.csv", header = TRUE)
+df_uS_1d <<- fread(file = "./data/unique1d.csv", header = TRUE)
+df_uS_1h <<- fread(file = "./data/unique1h.csv", header = TRUE)
+df_uS_10m <<- fread(file = "./data/unique10m.csv", header = TRUE)
 
 # For top 200 ports currently
-df_bytes_port <<- fread(file = "./data/darknet/metadata/bytes-ports.csv", header = TRUE)
-df_pkts_port <<- fread(file = "./data/darknet/metadata/packets-ports.csv", header = TRUE)
-df_uS_1d_port <<- fread(file = "./data/darknet/metadata/unique1d-ports.csv", header = TRUE)
-df_uS_1h_port <<- fread(file = "./data/darknet/metadata/unique1h-ports.csv", header = TRUE)
-df_uS_10m_port <<- fread(file = "./data/darknet/metadata/unique10m-ports.csv", header = TRUE)
+df_bytes_port <<- fread(file = "./data/bytes-ports.csv", header = TRUE)
+df_pkts_port <<- fread(file = "./data/packets-ports.csv", header = TRUE)
+df_uS_1d_port <<- fread(file = "./data/unique1d-ports.csv", header = TRUE)
+df_uS_1h_port <<- fread(file = "./data/unique1h-ports.csv", header = TRUE)
+df_uS_10m_port <<- fread(file = "./data/unique10m-ports.csv", header = TRUE)
 
 # For top 49 ASNs
-df_pkts_asn <<- fread(file = "./data/darknet/metadata/packets-asns.csv", header = TRUE)
-df_bytes_asn <<- fread(file = "./data/darknet/metadata/bytes-asns.csv", header = TRUE)
-df_uS_10m_asn <<- fread(file = "./data/darknet/metadata/unique10m-asns.csv", header = TRUE)
-df_uS_1h_asn <<- fread(file = "./data/darknet/metadata/unique1h-asns.csv", header = TRUE)
-df_uS_1d_asn <<- fread(file = "./data/darknet/metadata/unique1d-asns.csv", header = TRUE)
+df_pkts_asn <<- fread(file = "./data/packets-asns.csv", header = TRUE)
+df_bytes_asn <<- fread(file = "./data/bytes-asns.csv", header = TRUE)
+df_uS_10m_asn <<- fread(file = "./data/unique10m-asns.csv", header = TRUE)
+df_uS_1h_asn <<- fread(file = "./data/unique1h-asns.csv", header = TRUE)
+df_uS_1d_asn <<- fread(file = "./data/unique1d-asns.csv", header = TRUE)
 
 # Filters to exclude countries and rename column
 countries_excluded <<- c("Antarctica", "")
