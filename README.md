@@ -22,4 +22,4 @@ src/redis-server
 6. Run app.R.
 
 ## Contributions
-Thanks to Dr. Michael Kallitsis, who provided the data required for this project and the guidance he provided throughout the project, Dr. Stilian Stoev for his wonderful mentoring and guidance for the technical details of this project, and Mark Weiman for his many advices and suggestions, including the usage of Redis as our database. 
+Thanks to Dr. Michael Kallitsis, who provided the data required for this project and the guidance he provided throughout the project, Dr. Stilian Stoev for his wonderful mentoring and guidance for the technical details of this project, Mark Weiman for his many advices and suggestions, including the usage of Redis as our database, and Alexander Hsia for building the foundation of the RShiny app. 
